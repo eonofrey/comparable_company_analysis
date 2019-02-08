@@ -72,3 +72,72 @@ plot_log_hist(data['revenue'], name="Log Revenue")
 
 
 ############# Models #############
+from sklearn.model_selection import train_test_split
+from sklearn import linear_model
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn import preprocessing
+
+# Log transform 
+data[['enterprise_value', 'assets', 'revenue']] = data[['enterprise_value', 'assets', 'revenue']].apply(np.log)
+
+# Get dummy variables
+dummies = pd.get_dummies(data['sector'])
+encoded_data = data[['enterprise_value', 'assets', 'revenue']].join(dummies)
+
+# Split into explanatory and response 
+X_data = encoded_data.iloc[:,1:].values
+y_data = encoded_data['enterprise_value'].values
+
+# Split into training and testing
+X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.25, random_state=619)
+X_train.shape, X_test.shape
+y_train.shape, y_test.shape
+
+# Fit Linear Model
+lm = linear_model.LinearRegression()
+lm.fit(X_train, y_train)
+
+# Fit Random Forest
+rf = RandomForestRegressor(max_depth=3, random_state=619)
+rf.fit(X_train, y_train)
+
+# Make predictions 
+lm_predictions = lm.predict(X_test) 
+rf_predictions = rf.predict(X_test)
+
+# Exponentiate
+exp_lm_predictions = np.exp(lm_predictions)
+exp_rf_predictions = np.exp(rf_predictions)
+exp_actual = np.exp(y_test)
+
+# Predictions 
+test = pd.DataFrame(X_test, columns=['assets', 'revenue', 'Basic Materials', 
+                                    'Congolomerates', 'Consumer Goods', 'Financial', 'Healthcare',
+                                    'Industrial Goods', 'Services', 'Technology', 'Utilities'])
+
+# Get the predicitons from the regression and the random forest and real ev's
+lm_pred = pd.DataFrame(exp_lm_predictions, columns = ['lm predicted'])
+rf_pred = pd.DataFrame(exp_rf_predictions, columns = ['rf predicted'])
+actual = pd.DataFrame(exp_actual, columns=['actual ev'])
+
+# Join all together, add the names and tickers back in
+pred_df = test.join(lm_pred).join(rf_pred).join(actual)
+pred_df = pred_df.merge(data[['assets', 'revenue','ticker', 'name', 'sector']], on= ['assets', 'revenue'])
+
+# Exponentiate the logged values
+pred_df['assets'] = np.exp(test['assets'])
+pred_df['revenue'] = np.exp(test['revenue'])
+
+# Reorder
+pred_df = pred_df[['name', 'ticker', 'assets', 'revenue', 'sector', 'lm predicted', 'rf predicted', 'actual ev']]
+
+# Drop NaN's
+pred_df = pred_df.dropna(axis=0, how='any')
+
+# Data sanity check
+pred_df.head()
+pred_df.shape
+
+# Ouptput to .csv
+pred_df.to_csv("predictions.csv", index=False)
