@@ -40,4 +40,10 @@ Once I have this dataframe in the proper form, I loop through the tickers column
 <img width="440" alt="screen shot 2019-02-09 at 12 29 42 pm" src="https://user-images.githubusercontent.com/38504767/52524043-7869d980-2c66-11e9-8b5a-c0730cddf0fc.png">
 
 
+#### 1. intrinio_api.py
+
+For this script, I use Intrinio's API (and many, many keys for that API) to get the enterprise value and sector of each company in dataset. I used multiple API key's because Intrino limits daily requests for each key and 10-minute emails are very easy to create. In a process very similar to the one in quandl_api.py, I loop through the tickers in my dataframe and pull the appropriate data from the API. Below is an example of the final output of this script. 
+
+<img width="269" alt="screen shot 2019-02-09 at 12 42 39 pm" src="https://user-images.githubusercontent.com/38504767/52524173-3cd00f00-2c68-11e9-9573-80db9da6a492.png">
+
 
