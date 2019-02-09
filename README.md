@@ -62,7 +62,7 @@ Now I have a dataframe that is combined and cleaned (above). The final step befo
 
 The data on over 1,400 companies that incldues their tickers, name, enterprise value, assets, revenue, and sector. I split the data into training and test samples, and train linear regression and random foreset models on the training data. I use these models to predict the enterprise value of the companies in the test sample. Below is a screenshot of what my predictions dataframe looks like. 
 
-<img width="400" alt="screen shot 2019-02-09 at 12 55 31 pm" src="https://user-images.githubusercontent.com/38504767/52524401-8b7ea880-2c6a-11e9-8245-dc78b5ac7192.png">
+<img width="650" alt="screen shot 2019-02-09 at 12 55 31 pm" src="https://user-images.githubusercontent.com/38504767/52524401-8b7ea880-2c6a-11e9-8245-dc78b5ac7192.png">
 
 
 
