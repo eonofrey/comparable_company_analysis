@@ -3,7 +3,7 @@
 
 #### Background
 
-Comparable company analysis (CCA) is one of the most common valuation techniques in banking. This process attempts to estimate the enterprise value (market cap + debt + minority interest - cash) of a private company using the enterprise values of similar, public companies. Enteprise value is used to assess comany value in situations such as M&A advisory, fairness opinions, IPOs and restructuring.
+Comparable company analysis (CCA) is one of the most common valuation techniques in banking. This process attempts to estimate the enterprise value (market cap + debt + minority interest - cash) of a private company using the enterprise values of similar, public companies. Enterprise value is used to assess company value in situations such as M&A advisory, fairness opinions, IPOs and restructuring.
 
 The simplified steps to comparable company analysis are as follows: 
 
@@ -16,7 +16,7 @@ The simplified steps to comparable company analysis are as follows:
 
 #### Project Summary 
 
-In this project, I attempt to predict enterprise value in a better way than comparable company analysis. I gather a company's name, stock ticker, assets, revenue, sector, and enterprise value from the Quandl and Intrinio APIs in the quandl_api and  and intrinio_api notebooks. From there, I clean and organize the data and run regression and random forest models in the models notebook in order to try and predict the enterprise value of a company. The models have the following form: 
+In this project, I attempt to predict enterprise value in a better way than comparable company analysis. I gather a company's name, stock ticker, assets, revenue, sector, and enterprise value from the Quandl and Intrinio APIs in the quandl_api and intrinio_api notebooks. From there, I clean and organize the data and run regression and random forest models in the models notebook in order to try and predict the enterprise value of a company. The models have the following form: 
 
 Enterprise value ~ Assets + Revenue + Sector
 
