@@ -34,5 +34,10 @@ In this script I start with a list of tickers I downloaded from the internet. Th
 
 <img width="390" alt="screen shot 2019-02-09 at 12 23 13 pm" src="https://user-images.githubusercontent.com/38504767/52523974-8408d080-2c65-11e9-81e0-1e3f9298689b.png"> <img width="200" alt="screen shot 2019-02-09 at 12 26 38 pm" src="https://user-images.githubusercontent.com/38504767/52524010-fd082800-2c65-11e9-9812-b5721353b6c3.png">
  <img width="249" alt="screen shot 2019-02-09 at 12 24 50 pm" src="https://user-images.githubusercontent.com/38504767/52523993-badee680-2c65-11e9-8c42-5b5b82c1a931.png">
+ 
+Once I have this dataframe in the proper form, I loop through the tickers column and make calls to Quandl's API for the revenue and assets of each company. The result is shown below with some familiar companies (and my example row that was needed to start the loop).
+
+<img width="440" alt="screen shot 2019-02-09 at 12 29 42 pm" src="https://user-images.githubusercontent.com/38504767/52524043-7869d980-2c66-11e9-8b5a-c0730cddf0fc.png">
+
 
 
