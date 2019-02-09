@@ -54,11 +54,11 @@ For this script, I use Intrinio's API (and many, many keys for that API) to get 
 Now I have a dataframe that is combined and cleaned (above). The final step before running models on it is to do a small amount of transformation. One of the assumptions of regression is that the independent variables are normally distributed. Plotting enterprise value, assets, and revenue shows that these variables have a heavy right skew. To fix this I log-transform them to get a more Gaussian distribution for each variable.
 
 ##### Pre-transformation
-<img width="350" alt="screen shot 2019-02-09 at 12 46 11 pm" src="https://user-images.githubusercontent.com/38504767/52524230-cbdd2700-2c68-11e9-823a-b2dade3845a9.png"> <img width="350" alt="screen shot 2019-02-09 at 12 46 20 pm" src="https://user-images.githubusercontent.com/38504767/52524287-4f971380-2c69-11e9-8d32-0eb18c994668.png"> <img width="350" alt="screen shot 2019-02-09 at 12 46 26 pm" src="https://user-images.githubusercontent.com/38504767/52524291-62a9e380-2c69-11e9-8ec2-c86d396fb501.png">
+<img width="200" alt="screen shot 2019-02-09 at 12 46 11 pm" src="https://user-images.githubusercontent.com/38504767/52524230-cbdd2700-2c68-11e9-823a-b2dade3845a9.png"> <img width="200" alt="screen shot 2019-02-09 at 12 46 20 pm" src="https://user-images.githubusercontent.com/38504767/52524287-4f971380-2c69-11e9-8d32-0eb18c994668.png"> <img width="200" alt="screen shot 2019-02-09 at 12 46 26 pm" src="https://user-images.githubusercontent.com/38504767/52524291-62a9e380-2c69-11e9-8ec2-c86d396fb501.png">
 
 
 ##### Log Transformed 
-<img width="350" alt="screen shot 2019-02-09 at 12 46 32 pm" src="https://user-images.githubusercontent.com/38504767/52524299-810fdf00-2c69-11e9-9751-7af3dd50dab0.png"> <img width="350" alt="screen shot 2019-02-09 at 12 46 37 pm" src="https://user-images.githubusercontent.com/38504767/52524305-8e2cce00-2c69-11e9-8921-59c0ce73a324.png"> <img width="350" alt="screen shot 2019-02-09 at 12 46 46 pm" src="https://user-images.githubusercontent.com/38504767/52524314-a56bbb80-2c69-11e9-80a4-2a4ed67d8d58.png">
+<img width="200" alt="screen shot 2019-02-09 at 12 46 32 pm" src="https://user-images.githubusercontent.com/38504767/52524299-810fdf00-2c69-11e9-9751-7af3dd50dab0.png"> <img width="200" alt="screen shot 2019-02-09 at 12 46 37 pm" src="https://user-images.githubusercontent.com/38504767/52524305-8e2cce00-2c69-11e9-8921-59c0ce73a324.png"> <img width="200" alt="screen shot 2019-02-09 at 12 46 46 pm" src="https://user-images.githubusercontent.com/38504767/52524314-a56bbb80-2c69-11e9-80a4-2a4ed67d8d58.png">
 
 
 
