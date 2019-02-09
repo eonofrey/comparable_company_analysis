@@ -65,6 +65,17 @@ The data on over 1,400 companies that incldues their tickers, name, enterprise v
 <img width="650" alt="screen shot 2019-02-09 at 12 55 31 pm" src="https://user-images.githubusercontent.com/38504767/52524401-8b7ea880-2c6a-11e9-8245-dc78b5ac7192.png">
 
 
+#### 4. comparables_analysis.py
+
+Finally we arrive at the comparables analysis. In this script I first make a Company class that houses all of the data I've gathered for each company. I also create methods for it called get_comparables() and get_ccv(). get_comparables() will find the 5 closest companies in terms of revenue to the target company within it's sector. get_ccv() averages the enerprise value of these companies to give it's comparable company valuation. I realize this method has limits to it and the actual process of comparable company analysis is more nuanced than this, but this is my rough approximation. I use these methods to obtain the comparable company valuation for each company in my predictions dataframe in order to get a baseline to compare my models against. Below is the final dataframe with all of the data and predicitons in it.
+
+<img width="650" alt="screen shot 2019-02-09 at 1 06 31 pm" src="https://user-images.githubusercontent.com/38504767/52524497-8e2dcd80-2c6b-11e9-9383-e8461dd23089.png">
+
+## Results 
+
+I am extremely happy with the results I've obtained. The comparable company valuation had a mean absolute error of 1175.3%, the regression had a mean absolute error of 62.0%, and the random forest had a mean absolute error of 71.5%. I was expecting the random forest to pick up interaction effects between sector and assets/revenue, but it turns out that a simple regression outperformed it. These results are in-line with a research paper published by the Securities Litigation and Consulting Group in which they ran a regression on only revenue for a company in an attempt to beat the comparable copmany valuation and got a mean absolute error of 31.7% for regression and 11,641.8% for comparable company analysis.
+
+<img width="200" alt="screen shot 2019-02-09 at 1 08 26 pm" src="https://user-images.githubusercontent.com/38504767/52524524-d816b380-2c6b-11e9-81fe-d411773de220.png">       <img width="500" alt="screen shot 2019-02-09 at 1 09 12 pm" src="https://user-images.githubusercontent.com/38504767/52524533-eb298380-2c6b-11e9-8ac8-0dc7be1a0eab.png">
 
 
 
