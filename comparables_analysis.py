@@ -74,8 +74,7 @@ new_dict = {'name': '',
 new_df = pd.DataFrame(new_dict, index=[0])
 
 
-# Loop over companies, create a Company class, get the 
-# comparables estimate 
+# Loop over companies, create a Company class, get the comparables estimate 
 for i in range(pred_df.shape[0]): 
    
     # Craete the Company object
@@ -133,6 +132,5 @@ plt.xticks(y_pos, models)
 plt.ylabel('Error (In Percentages)')
 plt.title('Enerprise Value Prediction Errors')
 
-# Output dataframe and plot
-df
+# Output dataframe and plot df
 plt.show()
