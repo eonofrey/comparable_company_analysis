@@ -32,6 +32,7 @@ As someone who has conducted comparables analysis, I know the process can be imp
 
 In this script I start with a list of tickers I downloaded from the internet. They come with a lot of unnecessary text so I had to clean it up before it was usable. 
 
-<img width="390" alt="screen shot 2019-02-09 at 12 23 13 pm" src="https://user-images.githubusercontent.com/38504767/52523974-8408d080-2c65-11e9-81e0-1e3f9298689b.png"> <img width="249" alt="screen shot 2019-02-09 at 12 24 50 pm" src="https://user-images.githubusercontent.com/38504767/52523993-badee680-2c65-11e9-8c42-5b5b82c1a931.png">
+<img width="390" alt="screen shot 2019-02-09 at 12 23 13 pm" src="https://user-images.githubusercontent.com/38504767/52523974-8408d080-2c65-11e9-81e0-1e3f9298689b.png"> <img width="200" alt="screen shot 2019-02-09 at 12 26 38 pm" src="https://user-images.githubusercontent.com/38504767/52524010-fd082800-2c65-11e9-9812-b5721353b6c3.png">
+ <img width="249" alt="screen shot 2019-02-09 at 12 24 50 pm" src="https://user-images.githubusercontent.com/38504767/52523993-badee680-2c65-11e9-8c42-5b5b82c1a931.png">
 
 
